@@ -14,13 +14,14 @@ document.getElementById('search-input')?.addEventListener('keyup', async (e: Eve
     try {
         const res = await fetch(`http://localhost:3001/?q=${encodeURIComponent(query)}`)
         if (!res.ok) throw new Error('Failed to fetch results');
-        
-        const json = await res.json()
 
-        const result = `<li>${json.join('</li><li>')}</li>`
+        const json: { name: string }[] = await res.json()
+
+        // const result = `<li>${json.join('</li><li>')}</li>`
+        const result = json.map((item) => `<li>${item.name}</li>`).join('');
         const $results = document.getElementById('results')
         if ($results) {
-            $results.innerHTML = result
+            $results.innerHTML = result || '<p>No results found</p>';
         }
     } catch (error) {
         console.error('Error fetching search results:', error);
