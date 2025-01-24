@@ -1,3 +1,5 @@
+![Screenshot 2025-01-25 023851](https://github.com/user-attachments/assets/6b873f09-d92b-4361-8c98-e3ebb1fdb0e8)
+
 This project is designed to understand your ability to solve a simple fullstack challenge.
 It is not designed to trick you, its simply to understand your ability.
 Feel free to use google but be sure to understand what you are copy pasting.
