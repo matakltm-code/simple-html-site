@@ -2,11 +2,12 @@
   "name": "simple-html-site",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "engines": {
     "node": "22"
   },
   "scripts": {
-    "dev": "concurrently \"sass --watch style.scss ./build/style.css\" \"tsc --watch\" \"serve\""
+    "dev": "concurrently \"sass --watch style.scss ./build/style.css\" \"tsc --watch\" \"serve\" \"nodemon build/node/index.js\""
   },
   "keywords": [],
   "author": "",
