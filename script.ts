@@ -21,7 +21,7 @@ document.getElementById('search-input')?.addEventListener('keyup', async (e: Eve
         const result = json.map((item) => `<li>${item.name}</li>`).join('');
         const $results = document.getElementById('results')
         if ($results) {
-            $results.innerHTML = result || '<p>No results found</p>';
+            $results.innerHTML = result || '<p class="no-results">No results found</p>';
         }
     } catch (error) {
         console.error('Error fetching search results:', error);
